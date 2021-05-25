@@ -1,5 +1,11 @@
-# Video frame grabber
-# Save one in every 30 frames of video
+######## Video Frame Grabber #########
+#
+# Author: Evan Juras
+# Date: 5/15/21
+# Description: 
+# FrameGrabber.py plays through a video file, extracts individual frames from it, and saves the exracted frames as images.
+# The SKIP_FRAMES variable can be used to set how many images are extracted from the video. For example, setting
+# SKIP_FRAMES = 90 for a 30FPS video will extract one frame for every three seconds of video.
 
 import os
 import cv2
@@ -9,8 +15,8 @@ CWD_PATH = os.getcwd()
 VIDEO_NAMES = ['bison-video.mp4']
 FOLDER_PATH = os.path.join(CWD_PATH,'extracted_pics')
 
+SKIP_FRAMES = 90
 im_count = 0
-decimator = 30*60
 
 # Go through each video and extract frames
 for file in VIDEO_NAMES:
@@ -30,7 +36,7 @@ for file in VIDEO_NAMES:
 
         frame_count = frame_count + 1
         
-        if frame_count == decimator:
+        if frame_count == SKIP_FRAMES:
             # Resize the frame
             frame = cv2.resize(frame,(640,360))
             
