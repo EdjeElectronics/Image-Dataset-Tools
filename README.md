@@ -1,8 +1,8 @@
 # Summary
 This repository contains Python scripts for working with image datasets for machine learning object detection models. It contains the following scripts (more may be added later):
 
-1. FrameGrabber
-2. AutoLabeler
+1. [FrameGrabber](https://github.com/EdjeElectronics/Image-Dataset-Tools#framegrabber)
+2. [AutoLabeler](https://github.com/EdjeElectronics/Image-Dataset-Tools#autolabeler)
 
 A brief description of each script is given below. The scripts themselves are in their own folders in this repository. The README.md file in each folder gives instructions on how to use the script.
 
