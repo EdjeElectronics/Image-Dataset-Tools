@@ -51,8 +51,10 @@ for file in VIDEO_NAMES:
             cv2.waitKey()
             break
 
+        # Increment frame count
         frame_count = frame_count + 1
         
+        # If enough frames have passed, grab this frame and save it as an image
         if frame_count == SKIP_FRAMES:
             # Resize the frame
             frame = cv2.resize(frame,None,fx=RESIZE_FACTOR,fy=RESIZE_FACTOR)
