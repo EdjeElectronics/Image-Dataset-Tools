@@ -18,7 +18,7 @@ import sys
 # Define and parse input arguments
 parser = argparse.ArgumentParser()
 parser.add_argument('--imgdir', help='Folder to save images in (will be created if it doesn\'t exist already',
-                   default='cat-toys1')
+                   default='Pics')
 parser.add_argument('--resolution', help='Desired camera resolution in WxH.',
                    default='1280x720')
 
@@ -51,8 +51,7 @@ while img_exists:
         img_exists = False
 
 # Initialize webcam
-index = 0
-cap = cv2.VideoCapture(cv2.CAP_DSHOW + index)
+cap = cv2.VideoCapture(0)
 ret = cap.set(3, imW)
 ret = cap.set(4, imH)
 
