@@ -39,7 +39,7 @@ if not os.path.exists(dirpath):
 # If images already exist in directory, increment image number so existing images aren't overwritten
 # Example: if 'Pics-0.jpg' through 'Pics-10.jpg' already exist, imnum will be incremented to 11
 basename = dirname
-imnum = 0
+imnum = 1
 img_exists = True
 
 while img_exists:
