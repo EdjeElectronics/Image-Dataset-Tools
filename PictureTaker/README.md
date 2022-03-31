@@ -15,9 +15,10 @@ A window will open showing the camera's view. Press `p` on the keyboard to take 
 
 If `Pics_1.jpg` already exists in the Pics folder, the program will automatically increase the picture number until it reaches a filename that doesn't exist. (For example, if `Pics_1.jpg` through `Pics_20.jpg` already exist in the "Pics" folder, the program will start with `Pics_21.jpg` for the first saved picture.) This way, you can take pictures without having to worry about overwriting existing pictures.
 
-By default, the script runs at a resolution of 1280x720, saves pictures in a folder called "Pics", and uses "Pics" as the base filename for the pictures. The defaults can be changed using the following arguments:
-* Use `--res=WxH` to change the resolution
-* Use `--imgdir=<folder name>` to change the folder pictures are saved in (and the base filename for the pictures)
+### Command Arguments
+By default, the script runs at a resolution of 1280x720, saves pictures in a folder called "Pics", and uses "Pics" as the base filename for the pictures. The defaults can be changed using the following command arguments:
+* `--res` : specify the camera resolution in WxH to change the resolution
+* `--imgdir` : specify the folder to save pictures in (and to use as the base filename for the pictures)
 
 For example, to take pictures at a 1920x1080 resolution and save them in a folder called "Birds", issue the following command:
 
