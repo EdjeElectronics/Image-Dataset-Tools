@@ -11,7 +11,7 @@ First, download the [PictureTaker.py file](https://raw.githubusercontent.com/Edj
 
 ```python3 PictureTaker.py```
 
-A window will open showing the camera's view. Press `p` on the keyboard to take a picture. The first picture will be saved in a folder called "Pics" as filename `Pics_1.jpg`. If the "Pics" folder doesn't exist, it will be created automatically. Continue pressing `p` to take more pictures. Each additional picture will be saved as `Pics_2.jpg`, `Pics_3.jpg`, and so on.
+A window will open showing the camera's view. Press `p` on the keyboard to take a picture. The first picture will be saved in a folder called "Pics" as filename `Pics_1.jpg`. If the "Pics" folder doesn't exist, it will be created automatically. Continue pressing `p` to take more pictures. Each additional picture will be saved as `Pics_2.jpg`, `Pics_3.jpg`, and so on. Press `q` to quit.
 
 If `Pics_1.jpg` already exists in the Pics folder, the program will automatically increase the picture number until it reaches a filename that doesn't exist. (For example, if `Pics_1.jpg` through `Pics_20.jpg` already exist in the "Pics" folder, the program will start with `Pics_21.jpg` for the first saved picture.) This way, you can take pictures without having to worry about overwriting existing pictures.
 
