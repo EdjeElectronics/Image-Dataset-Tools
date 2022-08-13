@@ -60,7 +60,7 @@ print('Press q to quit.')
 
 while True:
     hasFrame, frame = cap.read()
-    cv2.imshow('Camera',frame)
+    cv2.imshow('Press \"p\" to take a picture!',frame)
 
     key = cv2.waitKey(1)
     if key == ord('q'):
