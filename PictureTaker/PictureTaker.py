@@ -51,16 +51,21 @@ while img_exists:
         img_exists = False
 
 # Initialize webcam
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(cv2.CAP_DSHOW + 1)
 ret = cap.set(3, imW)
 ret = cap.set(4, imH)
+
+# Initialize display window
+winname = 'Press \"p\" to take a picture!'
+cv2.namedWindow(winname)
+cv2.moveWindow(winname,50,30)
 
 print('Press p to take a picture. Pictures will automatically be saved in the %s folder.' % dirname)
 print('Press q to quit.')
 
 while True:
     hasFrame, frame = cap.read()
-    cv2.imshow('Press \"p\" to take a picture!',frame)
+    cv2.imshow(winname,frame)
 
     key = cv2.waitKey(1)
     if key == ord('q'):
