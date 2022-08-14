@@ -51,7 +51,7 @@ while img_exists:
         img_exists = False
 
 # Initialize webcam
-cap = cv2.VideoCapture(cv2.CAP_DSHOW + 1)
+cap = cv2.VideoCapture(0)
 ret = cap.set(3, imW)
 ret = cap.set(4, imH)
 
