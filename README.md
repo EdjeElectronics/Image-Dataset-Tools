@@ -1,10 +1,18 @@
 # Summary
 This repository contains Python scripts for working with image datasets for machine learning object detection models. It contains the following scripts (more may be added later):
 
-1. [FrameGrabber](https://github.com/EdjeElectronics/Image-Dataset-Tools#framegrabber)
-2. [AutoLabeler](https://github.com/EdjeElectronics/Image-Dataset-Tools#autolabeler)
+1. [PictureTaker](#picturetaker)
+1. [FrameGrabber](#framegrabber)
+2. [AutoLabeler](#autolabeler)
 
 A brief description of each script is given below. The scripts themselves are in their own folders in this repository. The README.md file in each folder gives instructions on how to use the script.
+
+## PictureTaker
+[PictureTaker](https://github.com/EdjeElectronics/Image-Dataset-Tools/tree/main/PictureTaker) is a simple Python script for taking pictures with OpenCV and a connected camera. It makes it easy to collect images for training a machine learning vision model.
+
+<p align="center">
+   <img width="500" src="docs/cat-picture-example">
+</p>
 
 ## FrameGrabber
 [FrameGrabber](https://github.com/EdjeElectronics/Image-Dataset-Tools/tree/main/FrameGrabber) is a tool for extracting individual frames from a video and saving them as an image. It allows you to quickly create training images from a video of objects that you want to train your model to detect.
