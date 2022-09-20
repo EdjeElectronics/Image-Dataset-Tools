@@ -11,7 +11,7 @@ A brief description of each script is given below. The scripts themselves are in
 [PictureTaker](https://github.com/EdjeElectronics/Image-Dataset-Tools/tree/main/PictureTaker) is a simple Python script for taking pictures with OpenCV and a connected camera. It makes it easy to collect images for training a machine learning vision model.
 
 <p align="center">
-   <img width="500" src="docs/cat-picture-example">
+   <img width="500" src="docs/cat-picture-example.jpg">
 </p>
 
 ## FrameGrabber
