@@ -4,7 +4,7 @@
 # Date: 8/8/21
 # Description: 
 # This program takes pictures (in .jpg format) from a connected webcam and saves
-# them in the specified directory. The default directory is 'Pics' and the
+# them in the specified directory. The default directory is 'image' and the
 # default resolution is 1280x720.
 #
 # Example usage to save images in a directory named Sparrow at 1920x1080 resolution:
@@ -18,9 +18,9 @@ import sys
 # Define and parse input arguments
 parser = argparse.ArgumentParser()
 parser.add_argument('--imgdir', help='Folder to save images in (will be created if it doesn\'t exist already',
-                   default='Pics')
+                   default='image')
 parser.add_argument('--resolution', help='Desired camera resolution in WxH.',
-                   default='1280x720')
+                   default='1920x1080')
 
 args = parser.parse_args()
 dirname = args.imgdir
@@ -37,7 +37,7 @@ if not os.path.exists(dirpath):
     os.makedirs(dirpath)
 
 # If images already exist in directory, increment image number so existing images aren't overwritten
-# Example: if 'Pics-0.jpg' through 'Pics-10.jpg' already exist, imnum will be incremented to 11
+# Example: if 'image-0.jpg' through 'image-10.jpg' already exist, imnum will be incremented to 11
 basename = dirname
 imnum = 1
 img_exists = True
@@ -56,15 +56,18 @@ ret = cap.set(3, imW)
 ret = cap.set(4, imH)
 
 # Initialize display window
-winname = 'Press \"p\" to take a picture!'
-cv2.namedWindow(winname)
-cv2.moveWindow(winname,50,30)
+winname = 'Press \"p\" to take a picture and Press \"q\" to exit!'
+cv2.namedWindow(winname, cv2.WINDOW_NORMAL)
+cv2.moveWindow(winname, cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
 
 print('Press p to take a picture. Pictures will automatically be saved in the %s folder.' % dirname)
 print('Press q to quit.')
 
 while True:
     hasFrame, frame = cap.read()
+    cv2.putText(frame, f'Images Taken: {imnum - 1}', (10, 30),
+            cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+
     cv2.imshow(winname,frame)
 
     key = cv2.waitKey(1)
